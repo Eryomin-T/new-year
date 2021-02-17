@@ -1,0 +1,246 @@
+.sidebar {
+  padding: 20px 24px;
+  height: calc(100% - 40px);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'SegoeUI', sans-serif;
+  z-index: 50;
+  transition: height 0.6s ease-in-out;
+  overflow: auto;
+
+  &__toggle {
+    width: 100%;
+    margin: 0 0 28px 0;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 8px;
+    color: rgba(0, 32, 51, 0.4);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.3125;
+    text-decoration: none;
+    text-align: start;
+    color: #3486e8;
+    background-color: rgba(0,121,194,.05);
+    font-weight: 600;
+    display: none;
+
+    svg {
+      width: 100%;
+
+      path {
+        fill: #3486e8;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__logo {
+    margin: 0 0 30px 0;
+  }
+
+  &__list {
+    li {
+      margin: 0 0 20px 0;
+
+      &:last-child {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  &__item{
+    width: 100%;
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 8px;
+    color: rgba(0, 32, 51, 0.4);
+    background-color: transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.3125;
+    text-decoration: none;
+
+    path {
+      transition: fill 0.2s;
+      fill-opacity: 1;
+    }
+
+    g {
+      transition: opacity 0.2s;
+      opacity: 0.3;
+    }
+
+    &:hover {
+      color: #3486E8;
+      background-color: rgba(0, 121, 194, 0.05);
+      font-weight: 600;
+
+      g {
+        opacity: 1;
+      }
+
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    &__toggle {
+      display: inline-grid;
+      gap: 0;
+
+      svg {
+        width: 42px;
+        height: 42px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    &__item {
+      gap: 0;
+
+      svg {
+        width: 42px;
+        height: 42px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    padding: 50px 24px 0 24px;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 50px;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      padding: 0 0 50px 0;
+    }
+
+    &__logo {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background: #fff;
+
+      picture {
+        padding: 13px 10px;
+      }
+    }
+
+    &__burger {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background-color: #3486E8;
+      z-index: 3;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        background-color: #fff;
+        position: absolute;
+        top: calc(50% - 6px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 2px;
+        transition: all 0.4s;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        background-color: #fff;
+        position: absolute;
+        top: calc(50% + 6px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 2px;
+        transition: all 0.4s;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.4s;
+      }
+    }
+  }
+}
+
+.sidebar.open {
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    .sidebar__toggle {
+      gap: 20px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    .sidebar__item {
+      gap: 20px;
+
+      span {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    height: 100%;
+
+    .sidebar__burger {
+      span {
+        transform: scale(0);
+      }
+      &:before {
+        transform: rotate(45deg);
+        left: calc(50% - 11px);
+        top: calc(50%);
+      }
+      &:after {
+        transform: rotate(-45deg);
+        left: calc(50% - 11px);
+        top: calc(50%);
+      }
+    }
+  }
+}

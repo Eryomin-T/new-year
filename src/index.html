@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Gulp</title>
+  </head>
+  <body>
+    @@include('components/sidebar/sidebar.html')
+    <main class="main">
+      @@include('components/preview/_preview.html')
+      @@include('components/info/_info.html')
+      @@include('components/promotion/_promotion.html')
+      @@include('components/our-story/our-story.html')
+      @@include('components/master-class/master-class.html')
+    </main>
+
+    @@include('components/custom-popup/custom-popup.html')
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

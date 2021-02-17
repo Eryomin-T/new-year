@@ -1,0 +1,50 @@
+<section class="master-list">
+  <div class="container">
+    <div  class="master-list__content">
+      <h2 class="master-list__title">Список мастер-классов</h2>
+      <div class="tabs">
+        <div class="tabs__nav">
+          <div class="tabs__nav-item active">
+            <div class="tabs__nav-title">Актуальные мастер-классы</div>
+          </div>
+          <div class="tabs__nav-item">
+            <div class="tabs__nav-title">Прошедшие мастер-классы</div>
+          </div>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__content-item active">
+            <div class="master-list__actual">
+              <div class="master-list__actual-sort">
+                <div class="select" id="select-1">
+                  <div class="select__backdrop" data-select="backdrop"></div>
+                  <button type="button" class="select__trigger" data-select="trigger">Сортировать</button>
+                  <div class="select__dropdown">
+                    <ul class="select__items">
+                      <li class="select__item select__item_selected" data-select="item" >Не сортировать</li>
+                      <li class="select__item" data-select="item" data-select-value="new">Сначала новые</li>
+                      <li class="select__item" data-select="item" data-select-value="old">Сначала старые</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="master-list__items master-list__items--actuals"></div>
+              <div  class="master-list__show-more master-list__show-more--actuals">
+                <a href="#" class="btn-more">ЗАГРУЗИТЬ ЕЩЕ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__content-item">
+            <div class="master-list__past">
+              <div class="master-list__items master-list__items--past"></div>
+              <div  class="master-list__show-more master-list__show-more--past">
+                <a href="#" class="btn-more">ЗАГРУЗИТЬ ЕЩЕ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

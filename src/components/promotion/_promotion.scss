@@ -1,0 +1,46 @@
+.promotion {
+  height: 100vh;
+  background: #224FA2;
+  background-image: url('../images/snow-over-block.png'),
+    url('../images/snow-over-block-bottom.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 0, center bottom;
+  background-size: contain, contain;
+  padding: 160px 0 95px 0;
+
+  &__content {
+    height: 100%;
+    max-width: 756px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 40px 0;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.0555;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 0 40px 0;
+    font-size: 16px;
+    line-height: 1.3125;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__timer {
+    margin: 0 0 60px 0;
+  }
+
+  @media screen and (max-width: 992px){
+    padding: 60px 0 50px 0;
+    height: auto;
+  }
+}

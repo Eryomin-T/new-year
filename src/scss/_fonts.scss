@@ -1,0 +1,50 @@
+/*Cocon-Bold*/
+@font-face {
+  font-family: 'Cocon';
+  font-weight: 300;
+  font-style: normal;
+  src:
+          url("../fonts/Cocon-Bold/Cocon_Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Cocon';
+  font-weight: 400;
+  font-style: normal;
+  src:
+          url("../fonts/Cocon-Bold/Cocon-Regular.otf") format("opentype");
+
+}
+
+@font-face {
+  font-family: 'Cocon';
+  font-weight: 700;
+  font-style: normal;
+  src:
+          url("../fonts/Cocon-Bold/Cocon_Bold.otf") format("opentype");
+}
+
+/*SegoeUI*/
+@font-face {
+  font-family: 'SegoeUI';
+  font-weight: 300;
+  font-style: normal;
+  src:
+          url("../fonts/SegoeUI/SegoeUI-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SegoeUI';
+  font-weight: 400;
+  font-style: normal;
+  src:
+          url("../fonts/SegoeUI/SegoeUI.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SegoeUI';
+  font-weight: 700;
+  font-style: normal;
+  src:
+          url("../fonts/SegoeUI/SegoeUI-Bold.woff") format("woff");
+}
